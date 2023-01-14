@@ -1,0 +1,155 @@
+/* Site-wide styling */
+a:hover
+{
+    transition-delay: 100ms;
+    transition: 200ms;
+    border-bottom: 2px solid black;
+}
+header a:hover
+{
+    transition-delay: 100ms;
+    transition: 200ms;
+    background-color: #eee;
+}
+footer a
+{
+    text-decoration: none;
+    width: fit-content;
+    margin: auto auto; 
+}
+footer a:visited
+{
+    color: #555; 
+}
+footer a:hover
+{
+    border-bottom: 2px solid #555;
+    color: #bbb; 
+}
+.links
+{
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-size: 16px;
+}
+.links a:hover
+{
+    color: #555;
+}
+.styles
+{
+    display: flex;
+    padding: 2vh 2vw;
+}
+.styles-info
+{
+    width: 50%;
+    padding: 1vh 1vw;
+    margin-right: auto;
+}
+.styles-info > h2
+{
+    border-bottom: 2px solid black;
+    width: fit-content; 
+}
+footer
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2vh;
+}
+/* Page styling */
+#index
+{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    row-gap: 5vh;
+    margin: 15vh auto;
+}
+.welcome
+{
+    text-align: center;
+    width: 80%;
+    margin: auto auto 18vh auto;
+}
+.welcome p
+{
+    text-align: center;
+    color: #aaa;
+    opacity: 0.8;;
+}
+.style main
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 80%;
+    margin: 15vh auto;
+}
+.style main article
+{
+    text-align: left;
+}
+.style main article h2:first-child
+{
+    border-bottom: 1px solid black; 
+    width: fit-content; 
+}
+.style main figure
+{
+    float: right;
+    margin: auto 0 auto 2vw;
+}
+.style main figure img
+{
+    height: 50vh;
+    width: 100vh;
+}
+.fake-button
+{
+    background-color: white;
+    border: 1px solid black;
+    padding: 4px 2px;
+    width: fit-content;
+    border-radius: 5px;
+}
+.fake-button:hover
+{
+    background-color: inherit;
+    cursor: pointer;
+}
+.comment-section
+{
+    padding: 2vh 2vw;
+}
+.comment-form
+{
+    padding: 2vh 2vw;
+    display: inline-grid;
+    column-gap: 2vw;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    row-gap: 2vh;
+    width: 100%;
+}
+.comment-form .inputs
+{
+    border-radius: 5px;
+}
+#commentSection
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 2vh 0;
+}
+.comment-name
+{
+    font-size: 16px;
+    border-bottom: 1px solid black;
+    width: fit-content;
+}

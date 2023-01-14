@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Pool Lounge</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-primary bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Pool Lounge</a>
+                <div class="links">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link" href="./pages/breastroke.html">Breastroke</a>
+                        <a class="nav-link" href="./pages/frontCrawl.html">Front-Crawl</a>
+                        <a class="nav-link" href="./pages/butterfly.html">Butterfly</a>            
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main id="index">
+        <article class="welcome">
+            <h1 class="display-1">Where are we?</h1>
+            <p>True to its name, the Pool Lunge is a more relaxed town square of sorts for discussing all matters swimming. We have pages explaining some of our preffered
+                swimming styles or strokes, but please...feel free to leave a comment on anything you like (anything swimming related of course).
+            </p>
+        </article>
+        <section class="styles bg-light">
+            <div class="styles-info">
+                <h2 id="index-bres">Breastroke</h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni quod commodi aliquid amet iste debitis, magnam perspiciatis alias! Dolores unde tempora expedita est obcaecati eum accusamus, laboriosam rem aut aspernatur.
+                </p>  
+            </div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/QGZ8rIy-YtI?start=60&mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
+        </section>
+        <section class="styles bg-light">
+            <div class="styles-info">
+                <h2>Front Crawl</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore facere eos excepturi magnam obcaecati expedita quaerat, architecto delectus rerum quam, omnis perferendis! Saepe hic cumque impedit ad nesciunt quibusdam neque!
+                </p>
+            </div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5HLW2AI1Ink?start=11&mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+        <section class="styles bg-light">
+            <div class="styles-info">
+                <h2>Butterfly</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt veniam odio mollitia vitae voluptate, animi tempora, eius deserunt distinctio voluptatum ipsum accusamus consequuntur voluptatem consequatur maxime, nihil aut necessitatibus cupiditate.
+                </p>
+            </div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/UffZn_-lU54?start=6&mute=1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+        <section class="comment-section bg-light">
+            <h2>Feedback</h2>
+            <form class="comment-form">
+                <input class="inputs" type="text" id="username" placeholder="Name">
+                <textarea class="inputs" id="comment" placeholder="Write your comments here"></textarea>
+                <p class="fake-button" id="submit">Submit</p>
+            </form>
+        </section>
+        <section class="comment-section bg-light">
+            <h2>Comments</h2>
+            <article id="commentSection"></article>
+        </section>
+    </main>
+    <footer class="bg-light">
+        <p class="primary">References</p>
+        <a href="https://www.youtube.com/watch?v=QGZ8rIy-YtI&t=137s" target="_blank">Breastroke Video</a>
+        <a href="https://www.youtube.com/watch?v=5HLW2AI1Ink&t=58s" target="_blank">Front-Crawl/Freestyle Video</a>
+        <a href="https://www.youtube.com/watch?v=UffZn_-lU54&t=25s" target="_blank">Butterfly Video</a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
