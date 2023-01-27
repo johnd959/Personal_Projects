@@ -147,10 +147,11 @@ int main(void)
             {
                 total += calculate_total(week1->list_start);
             }
-            printf("Your total for the %s is $%f\n", periodName, total);
+            printf("Your total for the %s is $%.2f\n", periodName, total);
             FILE *file = fopen("Costs.txt", "a'");
             fwrite(&total, 100, 1, file);
             fclose(file);
+            free(periodName); 
            free(week1);
         }
     }
@@ -215,9 +216,9 @@ void fill_list(node* list_start, char* phrase)
     _flushall(); 
     node* cursor = NULL;
     char *phrase1 = malloc(100 * sizeof(char));
-    phrase1 = "Enter a category: ";
+    strncpy(phrase1, "Enter a category: ", MAX);
     char *phrase2 = malloc(100 * sizeof(char));
-    phrase2 = "Enter a quanity: ";
+    strncpy(phrase2, "Enter a quanity: ", MAX);
     int iteration = 0;
     for (cursor = list_start; cursor != NULL; cursor = cursor->next)
     {
@@ -227,7 +228,7 @@ void fill_list(node* list_start, char* phrase)
         {
             category1 = get_int(phrase1);
         }
-        while (!(category1 >= 0 && category1 <=5));
+        while (category1 < 0 || category1 > 5);
         if (category1 != 0)
         {
             add_list(cursor);
@@ -241,9 +242,11 @@ void fill_list(node* list_start, char* phrase)
         {
             quants1 = get_int(phrase2);
         }
-        while (!(quants1 >=0 && quants1 <=10000));
+        while (quants1 < 0 || quants1 > 10000);
         cursor->quants = quants1;
     }
+    free(phrase1);
+    free(phrase2); 
     return;
 }
 
