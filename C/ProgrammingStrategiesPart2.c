@@ -36,7 +36,6 @@ float APPLE_TABLET = 75.69;
 float ANDROID_TABLET = 65.73;
 float WINDOWS_TABLET = 51.49;
 bool add = false; 
-int max = 100; 
 
 int main(void)
 {
@@ -61,9 +60,9 @@ int main(void)
         {
             printf("\n");
             _flushall();
-            char *phrase = malloc(max * sizeof(char)); 
-            char *buffer = malloc(max * sizeof(char));
-            for (int i = 0; i < (max -1); i++)
+            char *phrase = malloc(MAX * sizeof(char));
+            char *buffer = malloc(MAX * sizeof(char));
+            for (int i = 0; i < (MAX - 1); i++)
             {
                 phrase[i] = 0; 
             }
@@ -73,20 +72,19 @@ int main(void)
                 printf("Enter a specific day: ");
                 fgets(buffer, MAX, stdin);
                 end = sscanf(buffer, "%99c", phrase);
-            } 
-            while (end == EOF);
+            } while (end == EOF);
             node *list = create_list(1);
             week1->list_start = list;
-            strncpy(week1->day, phrase, max);  
+            strncpy(week1->day, phrase, 10);  
             fill_list(list, phrase);
             total = calculate_total(list);
-            printf("Your total for  %s is $%f\n", phrase, total); 
+            printf("Your total for  %s is $%.2f\n", phrase, total); 
             free_week(week1);
             free(buffer);
         }
         else
         {
-            char period_name[MAX];
+            char *periodName = malloc(MAX * sizeof(char));
             add = true;
             int repeat = 0;
             int index = 1;
@@ -94,15 +92,15 @@ int main(void)
             {
                 case 2:
                     repeat = 7;
-                    strncpy(&period_name, "week", MAX);
+                    strncpy(periodName, "week", MAX);
                     break;
                 case 3:
                     repeat = 5;
-                    strncpy(&period_name, "business week", MAX);
+                    strncpy(periodName, "business week", MAX);
                     break;
                 case 4:
                     repeat = 2;
-                    strncpy(&period_name, "weekend", MAX);
+                    strncpy(periodName, "weekend", MAX);
                     index = 6; 
                     break;
             }
@@ -149,7 +147,7 @@ int main(void)
             {
                 total += calculate_total(week1->list_start);
             }
-            printf("Your total for the %s is $%.2f\n", period_name, total);
+            printf("Your total for the %s is $%f\n", periodName, total);
             FILE *file = fopen("Costs.txt", "a'");
             fwrite(&total, 100, 1, file);
             fclose(file);
@@ -306,7 +304,6 @@ void add_list(node *current_position)
     pointer->category = 0;
     pointer->quants = 0;
 }
-
 week* create_week()
 {
     week* week_start = NULL;
@@ -316,7 +313,6 @@ week* create_week()
     week_start->next = NULL;
     return week_start; 
 }
-
 void add_week(week* currentNode)
 {
     currentNode->next = malloc(sizeof(week));
