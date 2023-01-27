@@ -1,0 +1,7 @@
+ID_Name_Specialty_Schedule_Qualifications_RoomNbr
+21_Dr. Tyler_Pharmacy_5am-11am_PharmD,MS,RPh_17
+32_Dr. Vikram_Family Medicine_10pm-3am_MBBS,MPH_45
+17_Dr. Amy_General Surgery_8pm-2am_MD,FRCPSC_8
+33_Dr. David_Orthopedics_10am-4pm_MBBS,MS_40
+123_Dr. Ross_Neurology_8pm-10am_MST,MD_102
+66_Dr. Mike_Cardiology_9am-5pm_MD,FRCPC_2

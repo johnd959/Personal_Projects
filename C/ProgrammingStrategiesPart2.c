@@ -36,6 +36,7 @@ float APPLE_TABLET = 75.69;
 float ANDROID_TABLET = 65.73;
 float WINDOWS_TABLET = 51.49;
 bool add = false; 
+int max = 100; 
 
 int main(void)
 {
@@ -60,23 +61,28 @@ int main(void)
         {
             printf("\n");
             _flushall();
-            char phrase[10] = "";
-            char *phrase1 = malloc(10 * sizeof(char));
+            char *phrase = malloc(max * sizeof(char)); 
+            char *buffer = malloc(max * sizeof(char));
+            for (int i = 0; i < (max -1); i++)
+            {
+                phrase[i] = 0; 
+            }
             do
             {
                 int end = 0;
                 printf("Enter a specific day: ");
-                fgets(phrase1, MAX, stdin);
-                end = sscanf(phrase1, "%s", &phrase);
-            } while (end == EOF);
+                fgets(buffer, MAX, stdin);
+                end = sscanf(buffer, "%99c", phrase);
+            } 
+            while (end == EOF);
             node *list = create_list(1);
             week1->list_start = list;
-            strncpy(week1->day, &phrase, 10);  
-            fill_list(list, &phrase);
+            strncpy(week1->day, phrase, max);  
+            fill_list(list, phrase);
             total = calculate_total(list);
             printf("Your total for  %s is $%f\n", phrase, total); 
             free_week(week1);
-            free(phrase1);
+            free(buffer);
         }
         else
         {
@@ -143,7 +149,7 @@ int main(void)
             {
                 total += calculate_total(week1->list_start);
             }
-            printf("Your total for the %s is $%f\n", period_name, total);
+            printf("Your total for the %s is $%.2f\n", period_name, total);
             FILE *file = fopen("Costs.txt", "a'");
             fwrite(&total, 100, 1, file);
             fclose(file);
@@ -300,6 +306,7 @@ void add_list(node *current_position)
     pointer->category = 0;
     pointer->quants = 0;
 }
+
 week* create_week()
 {
     week* week_start = NULL;
@@ -309,6 +316,7 @@ week* create_week()
     week_start->next = NULL;
     return week_start; 
 }
+
 void add_week(week* currentNode)
 {
     currentNode->next = malloc(sizeof(week));

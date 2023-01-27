@@ -1,0 +1,8 @@
+C:\Software Development\Programming\C#\Sem1_Final_ProjectCS\Sem1_Final_ProjectCS\bin\Debug\Sem1_Final_ProjectCS.exe.config
+C:\Software Development\Programming\C#\Sem1_Final_ProjectCS\Sem1_Final_ProjectCS\bin\Debug\Sem1_Final_ProjectCS.exe
+C:\Software Development\Programming\C#\Sem1_Final_ProjectCS\Sem1_Final_ProjectCS\bin\Debug\Sem1_Final_ProjectCS.pdb
+C:\Software Development\Programming\C#\Sem1_Final_ProjectCS\Sem1_Final_ProjectCS\obj\Debug\Sem1_Final_ProjectCS.csproj.AssemblyReference.cache
+C:\Software Development\Programming\C#\Sem1_Final_ProjectCS\Sem1_Final_ProjectCS\obj\Debug\Sem1_Final_ProjectCS.csproj.SuggestedBindingRedirects.cache
+C:\Software Development\Programming\C#\Sem1_Final_ProjectCS\Sem1_Final_ProjectCS\obj\Debug\Sem1_Final_ProjectCS.csproj.CoreCompileInputs.cache
+C:\Software Development\Programming\C#\Sem1_Final_ProjectCS\Sem1_Final_ProjectCS\obj\Debug\Sem1_Final_ProjectCS.exe
+C:\Software Development\Programming\C#\Sem1_Final_ProjectCS\Sem1_Final_ProjectCS\obj\Debug\Sem1_Final_ProjectCS.pdb

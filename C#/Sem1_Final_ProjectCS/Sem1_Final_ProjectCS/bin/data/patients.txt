@@ -1,0 +1,6 @@
+ID_Name_Diagnosis_Gender_Age
+12_Pankaj_Leukemia_Male_30
+13_Janina_Pneumonia_Female_23
+14_Alonna_Malaria_Female_45
+15_Ravi_Diabetes_Male_65
+16_Mary_Cancer_Female_55
