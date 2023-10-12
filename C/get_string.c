@@ -1,31 +1,38 @@
 #include <stdio.h>
 #include <stdlib.h>
-short MAX = 10000;  
+#include <string.h>
+#include <stdbool.h>
+//The max string length
+const int MAX = 100;
+char *get_string(char *);
 
-char *getString(char message[MAX]);
-
-int main(void)
+int main (void)
 {
-    char *name = getString("What is your name: ");
-    printf(name);
-    free(name);
-    getchar(); 
+    char *message = malloc(MAX * sizeof(char));
+    strncpy(message, "Hi, what is your name: ", MAX);
+    char *name = get_string(message);
+    printf("Hi, %s", name);
+    free(message);
+    free(name); 
 }
 
-
-char* getString(char message[MAX])
+char *get_string(char *phrase)
 {
-    char *String = malloc(MAX * sizeof(char));
-    char *Buffer = malloc(MAX * sizeof(char));
-    int end = 1;
-    do
+    char *string = malloc(MAX * sizeof(char));
+    for (int i = 0; i < MAX; i++)
     {
-        char nul[3] = "/0";
-        printf("%s", message);
-        fgets(Buffer, (MAX * sizeof(char)), stdin);
-        end = sscanf(Buffer, "%s", String);
-    } 
-    while (end == EOF);
-    free(Buffer);
-    return String;
+        string[i] = 0;
+    }
+    char *buffer = malloc(MAX * sizeof(char));
+    int end = 0;
+    do 
+    {
+        printf(phrase);
+        _flushall();
+        bool valid = false;
+        fgets(buffer, MAX, stdin); 
+        end = sscanf(buffer, "%99c", string);
+    }
+    while (end == -1);
+    return string; 
 }
